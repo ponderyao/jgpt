@@ -1,5 +1,5 @@
 # JGPT
-**JGPT: the Java SDK for OpenAI ChatGPT API**
+**JGPT: 提供OpenAI中ChatGPT相关API接入的Java软件开发工具包**
 
 [![standard-readme compliant](https://img.shields.io/badge/JDK-1.8+-brightgreen.svg?style=flat-square)](https://github.com/ponderyao/agile-decision-engine)
 [![standard-readme compliant](https://img.shields.io/badge/Maven-3.8.6-brightgreen.svg?style=flat-square)](https://github.com/ponderyao/agile-decision-engine)
@@ -7,21 +7,21 @@
 [![standard-readme compliant](https://img.shields.io/badge/jtokkit-0.5.0-orange.svg?style=flat-square)](https://github.com/ponderyao/agile-decision-engine)
 [![standard-readme compliant](https://img.shields.io/badge/License-Apache2.0-blue.svg?style=flat-square)](https://github.com/ponderyao/agile-decision-engine)
 
-[Chinese Doc](https://github.com/ponderyao/jgpt/blob/main/README_zh.md)
+[English Doc](https://github.com/ponderyao/jgpt/blob/main/README.md)
 
-## Introduction
-JGPT is an SDK specifically designed to provide ChatGPT related OpenAI capabilities for Java applications, supporting direct or streaming calls to chat API interfaces
+## 简介
+JGPT 是专为Java应用提供ChatGPT相关OpenAI能力的SDK，支持直接或流式调用聊天API接口
 
-## Features
-- A client that provides direct/streaming calls, where the latter allows the caller to print query results word by word
-- The client for directly calling  provides an additional interface for querying account information and expense records, which helps to control usage costs
-- Support mainstream models currently supported by OpenAI, such as GPT-3.5 (16k) and GPT-4 (32k)
-- Support inquiry message content based on function call
-- Allow applications with limited access to the OpenAI interface to access it directly by setting custom proxies
-- Allow custom interceptors to add logical processing before and after API calls
+## 特性
+- 提供直接/流式调用的客户端，流式客户端允许调用方逐词打印问询结果
+- 直接调用客户端额外提供账户信息与费用记录查询接口，有助于控制使用成本
+- 支持GPT-3.5（16k）与GPT-4（32k）等当前OpenAI支持的主流模型
+- 支持基于函数调用（function-call)的问询消息内容
+- 允许直接访问OpenAI接口受限的应用通过设置自定义代理来访问
+- 允许在API调用前后自定义拦截器增加逻辑处理
 
-## Use
-### Maven dependency
+## 使用
+### Maven 依赖
 ```xml
 <dependency>
     <groupId>io.github.ponderyao</groupId>
@@ -30,7 +30,7 @@ JGPT is an SDK specifically designed to provide ChatGPT related OpenAI capabilit
 </dependency>
 ```
 ### Java code
-#### direct call
+#### 直接调用
 ```java
 public class JGptTest {
     public void chatCompletion() {
@@ -57,7 +57,7 @@ public class JGptTest {
     }
 }
 ```
-#### streaming call
+#### 流式调用
 ```java
 public class JGptTest {
     public void chatCompletion() {
@@ -91,7 +91,7 @@ public class JGptTest {
     }
 }
 ```
-#### account subscription
+#### 查询账户信息
 ```java
 public class JGptTest {
     public void chatCompletion() {
@@ -110,7 +110,7 @@ public class JGptTest {
     }
 }
 ```
-#### account usage
+#### 查询费用记录
 ```java
 public class JGptTest {
     public void chatCompletion() {
@@ -132,6 +132,6 @@ public class JGptTest {
 }
 ```
 
-## Reference
+## 参考
 - [https://github.com/Grt1228/chatgpt-java](https://github.com/Grt1228/chatgpt-java)
 - [https://github.com/PlexPt/chatgpt-java](https://github.com/PlexPt/chatgpt-java)
